@@ -1,0 +1,48 @@
+[{
+  "Id":1,
+  "Name":"Birla House",
+  "Type":"Bunglow",
+  "Price":12000,
+  "SellRent":1,
+  "Image":""
+},
+{
+  "Id":6,
+  "Name":"Birla House",
+  "Type":"Bunglow",
+  "Price":12000,
+  "SellRent":1,
+  "Image":""
+},
+{
+  "Id":2,
+  "Name":"Baba Cottage",
+  "Type":"Bunglow",
+  "Price":180000,
+  "SellRent":2,
+  "Image":""
+},
+{
+  "Id":3,
+  "Name":"Wlow State",
+  "Type":"Flat",
+  "Price":14000,
+  "SellRent":1,
+  "Image":""
+},
+{
+  "Id":4,
+  "Name":"Gaultam Villa",
+  "Type":"Villa",
+  "Price":15000,
+  "SellRent":2,
+  "Image":"" },
+{
+  "Id":5,
+  "Name":"Ambani House",
+  "Type":"Bunglow",
+  "Price":12000,
+  "SellRent":1,
+  "Image":""
+}
+]
