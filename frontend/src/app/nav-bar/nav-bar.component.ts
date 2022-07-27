@@ -8,15 +8,15 @@ import { AlertifiyService } from '../services/alertifiy.service';
   styleUrls: ['./nav-bar.component.css']
 })
 export class NavBarComponent implements OnInit {
-
+  loggedinUser:string="Gusest";
   constructor(private router:Router,private alertify:AlertifiyService) { }
 
   ngOnInit() {
   }
-loggedIn(){
+  loggedin(){
   return localStorage.getItem("token");
 }
-logOut(){
+onLogout(){
   localStorage.removeItem("token");
 this.router.navigate(["/user/login"]);
 this.alertify.success("Logged out Successfully!!");

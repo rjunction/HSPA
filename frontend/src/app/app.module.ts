@@ -17,8 +17,9 @@ import { UserService } from './services/User.service';
 import { AlertifiyService } from './services/alertifiy.service';
 import { AuthService } from './services/Auth.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { TabsModule } from 'ngx-bootstrap/tabs';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { ButtonsModule } from 'ngx-bootstrap/buttons';
 
 const appRoutes:Routes=[
   {path:'add-property',component:AddPropertyComponent},
@@ -48,7 +49,9 @@ const appRoutes:Routes=[
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    BsDropdownModule.forRoot()
+    BsDropdownModule.forRoot(),
+    TabsModule.forRoot(),
+    ButtonsModule.forRoot()
   ],
   providers: [HousingService,UserService,AlertifiyService,AuthService],
   bootstrap: [AppComponent]
