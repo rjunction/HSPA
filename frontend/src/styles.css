@@ -3,3 +3,4 @@
 @import url(assets/form.css);
 @import url(../node_modules/alertifyjs/build/css/alertify.min.css);
 @import url(../node_modules/alertifyjs/build/css/themes/bootstrap.min.css);
+@import url(../node_modules/ngx-bootstrap/datepicker/bs-datepicker.css);

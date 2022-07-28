@@ -1,7 +1,8 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, Type, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { TabsetComponent } from 'ngx-bootstrap/tabs';
+import { IProperty } from '../IProperty.interface';
 
 @Component({
   selector: 'app-add-property',
@@ -14,6 +15,14 @@ export class AddPropertyComponent implements OnInit {
   propertyType:Array<any>=["Apartment","House","Duplex"]
   furnishType:Array<any>=["Fuly","Semi","UnFurnished"]
   gateEntrance:Array<any>=["North","West","South","East"]
+  propertyView:IProperty={
+    Id:0,
+    Image:'',
+Name:'',
+Price:0,
+SellRent:0,
+  Type:''
+  };
   // @ViewChild("form")
   // addPropertyForm!: NgForm;
   constructor(private router:Router) { }
