@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { IPropertyBase } from 'src/app/model/IPropertyBase';
 import { HousingService } from 'src/app/services/housing.service';
 import { IProperty } from '../IProperty.interface';
 
@@ -11,7 +12,7 @@ import { IProperty } from '../IProperty.interface';
 })
 export class PropertyListComponent  {
   SellRent : Number=1;
-  properties:Array<IProperty>=[];
+  properties:Array<IPropertyBase>=[];
 constructor(private housingService:HousingService,private route:ActivatedRoute){
 
 }
