@@ -9,7 +9,7 @@
     <div class="card-body">
       <form (ngSubmit)="onSubmit(form)" #form="ngForm">
         <div class="tab-panel">
-          <tabset #formTabs class="member-tabset">
+          <tabset #formTabs class="member-tabset" ngModelGroup="BasicInfo" #BasicInfo="ngModelGroup">
             <tab heading="Basic Info" id="tab1">
               <div class="form-group col-12">
               <p>I want to</p>
@@ -20,7 +20,7 @@
               </div>
               <div class="form-group col-12 mt-2">
                 <p>BHK</p>
-                <div class="btn-group" btnRadioGroup>
+                <div class="btn-group" btnRadioGroup name="BHK" [(ngModel)]="propertyView.BHK">
                   <label *ngFor="let bhk of [1,2,3,4]"
                   class="btn btn-outline-primary me-2" [btnRadio]="bhk.toString()" name="SaleRent">{{bhk}}</label>
 
@@ -47,7 +47,7 @@
               </div>
               <div class="form-group col-12 mt-2">
                 <p>Furnish Type</p>
-                <div class="btn-group" btnRadioGroup>
+                <div class="btn-group" btnRadioGroup name="FType" [(ngModel)]="propertyView.FType">
                   <label *ngFor="let ft of furnishType"
                   class="btn btn-outline-primary me-2" [btnRadio]="ft.toString()" name="SaleRent">{{ft}}</label>
 
@@ -55,11 +55,11 @@
                 </div>
               <div class="form-group col-12 mt-2">
                 <label for="price">City</label>
-                <input type="text" class="form-control" name="City">
+                <input type="text" class="form-control" name="City" [(ngModel)]="propertyView.City">
               </div>
               <div class="form-group col-12">
 
-                <button type="button" class="btn btn-primary col-12 mt-2" (click)="selectTab(1)">Next</button>
+                <button type="button" class="btn btn-primary col-12 mt-2" (click)="selectTab(1)" [disabled]="!BasicInfo.valid">Next</button>
               </div>
             </tab>
             <tab heading="Area and pricing">
@@ -90,7 +90,7 @@
 
               <div class="form-group col-12">
                 <button type="button" class="btn btn-primary col-12" (click)="selectTab(0)">Previous</button>
-                <button type="button" class="btn btn-primary col-12 mt-2" (click)="selectTab(2)">Next</button>
+                <button type="button" class="btn btn-primary col-12 mt-2" (click)="selectTab(2)" >Next</button>
               </div>
             </tab>
             <tab heading="Address"><div class="form-group col-12">
