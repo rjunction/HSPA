@@ -13,6 +13,9 @@ import { IProperty } from '../IProperty.interface';
 export class PropertyListComponent  {
   SellRent : Number=1;
   properties:Array<IPropertyBase>=[];
+  city:string ='';
+  searchedCity:string='';
+  sortCriteria:string='Price';
 constructor(private housingService:HousingService,private route:ActivatedRoute){
 
 }
@@ -34,5 +37,8 @@ this.housingService.getAllProperties(this.SellRent).subscribe(
 
 
 // this.http.get('data/properties.json').subscribe(data=>this.properties=data);
+}
+searchCity(){
+this.searchedCity=this.city;
 }
 }
