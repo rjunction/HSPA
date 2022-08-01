@@ -21,11 +21,15 @@ import { TabsModule } from 'ngx-bootstrap/tabs';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import { PropertyDetailResolverService } from './property/property-detail/property-detail-resolver.service';
+import { NgxGalleryModule } from '@kolkov/ngx-gallery';
 
 const appRoutes:Routes=[
   {path:'add-property',component:AddPropertyComponent},
   {path:'',component:PropertyListComponent},
- {path:'property-detail/:id',component:PropertyDetailComponent},
+ {path:'property-detail/:id',
+ component:PropertyDetailComponent,
+resolve:{prp:PropertyDetailResolverService}},
  {path:'user/login',component:UserLoginComponent},
  {path:'user/register',component:UserRegisterComponent},
  {path:'**',component:PropertyListComponent}
@@ -53,9 +57,10 @@ const appRoutes:Routes=[
     BsDropdownModule.forRoot(),
     TabsModule.forRoot(),
     ButtonsModule.forRoot(),
-    BsDatepickerModule.forRoot()
+    BsDatepickerModule.forRoot(),
+    NgxGalleryModule
   ],
-  providers: [HousingService,UserService,AlertifiyService,AuthService],
+  providers: [HousingService,UserService,AlertifiyService,AuthService,PropertyDetailResolverService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

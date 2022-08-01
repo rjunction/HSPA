@@ -24,7 +24,15 @@ ngOnInit():void{
 this.SellRent=2;
   }
 
-this.housingService.getAllProperties(this.SellRent).subscribe(data=>this.properties=data);
- // this.http.get('data/properties.json').subscribe(data=>this.properties=data);
+this.housingService.getAllProperties(this.SellRent).subscribe(
+  data=>{
+    this.properties=data
+
+
+}
+  );
+
+
+// this.http.get('data/properties.json').subscribe(data=>this.properties=data);
 }
 }
