@@ -5,10 +5,15 @@
 <select [(ngModel)]="sortCriteria">
   <option value="Price">Price</option>
 <option value="City">City</option>
+
   </select>
+  <button (click)="changeSortDirection()">
+    <i *ngIf="sortDirection==='desc'" class="fa-solid fa-arrow-down-a-z"></i>
+    <i *ngIf="sortDirection==='asc'" class="fa-solid fa-arrow-up-a-z"></i>
+  </button>
 <div class="row">
 
-  <div *ngFor="let property of properties|filter:searchedCity:'City'|sort:[sortCriteria,'desc']" class="shadow-lg col-sm-4">
+  <div *ngFor="let property of properties|filter:searchedCity:'City'|sort:[sortCriteria,sortDirection]" class="shadow-lg col-sm-4">
  <app-property-card [property]="property"></app-property-card>
 </div>
   </div>

@@ -16,6 +16,7 @@ export class PropertyListComponent  {
   city:string ='';
   searchedCity:string='';
   sortCriteria:string='Price';
+  sortDirection:string="asc";
 constructor(private housingService:HousingService,private route:ActivatedRoute){
 
 }
@@ -40,5 +41,8 @@ this.housingService.getAllProperties(this.SellRent).subscribe(
 }
 searchCity(){
 this.searchedCity=this.city;
+}
+changeSortDirection(){
+  this.sortDirection=this.sortDirection==="asc"?"desc":"asc";
 }
 }
