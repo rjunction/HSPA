@@ -22,7 +22,7 @@ export class AddPropertyComponent implements OnInit {
   furnishType:Array<any>=["Fuly","Semi","UnFurnished"]
   gateEntrance:Array<any>=["North","West","South","East"]
   nextClicked:boolean=false;
-  cityList:string[]=[];
+  cityList:any[]=[];
   propertyView:IPropertyBase={
     Id:0,
     Image:'',

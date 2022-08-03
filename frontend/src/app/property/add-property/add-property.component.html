@@ -77,9 +77,9 @@
                 [(ngModel)]="propertyView.City">
                 <option value="">--Select City--</option>
               <option *ngFor="let city of cityList"
-              value="{{city}}"
+              value="{{city.id}}"
               >
-                {{city}}
+                {{city.name}}
               </option>
               </select>
               </div>
