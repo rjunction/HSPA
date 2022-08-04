@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Hr+Uyt72nqqLkPR+ThYDusWKJKlY2Zp+Q7+GvwX2otmjOkmtTrDxnO+hFVoA4Yo6i71z8xIc4M/CC/FzHIC50Q==",
+  "dgSpecHash": "0jXAcLmCBwkZdpudC5aPWly+EHO5Wg2YDEZBuO3bzwn836hrkCs1ifSH4synh9/vWe/2Xi84ErCGlbfq5hPV4A==",
   "success": true,
   "projectFilePath": "F:\\angualar\\hspa\\WebAPI\\WebAPI.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\rahuloffice\\.nuget\\packages\\automapper\\8.1.1\\automapper.8.1.1.nupkg.sha512",
     "C:\\Users\\rahuloffice\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\rahuloffice\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\rahuloffice\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",
