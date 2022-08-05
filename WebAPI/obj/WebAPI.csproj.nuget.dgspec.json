@@ -1,25 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "F:\\angualar\\hspa\\WebAPI\\WebAPI.csproj": {}
+    "E:\\hspa\\HSPA\\WebAPI\\WebAPI.csproj": {}
   },
   "projects": {
-    "F:\\angualar\\hspa\\WebAPI\\WebAPI.csproj": {
+    "E:\\hspa\\HSPA\\WebAPI\\WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\angualar\\hspa\\WebAPI\\WebAPI.csproj",
+        "projectUniqueName": "E:\\hspa\\HSPA\\WebAPI\\WebAPI.csproj",
         "projectName": "WebAPI",
-        "projectPath": "F:\\angualar\\hspa\\WebAPI\\WebAPI.csproj",
-        "packagesPath": "C:\\Users\\rahuloffice\\.nuget\\packages\\",
-        "outputPath": "F:\\angualar\\hspa\\WebAPI\\obj\\",
+        "projectPath": "E:\\hspa\\HSPA\\WebAPI\\WebAPI.csproj",
+        "packagesPath": "C:\\Users\\rahul\\.nuget\\packages\\",
+        "outputPath": "E:\\hspa\\HSPA\\WebAPI\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\rahuloffice\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\rahul\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -47,6 +43,10 @@
             "AutoMapper": {
               "target": "Package",
               "version": "[8.1.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[6.1.0, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -81,7 +81,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
         }
       }
     }

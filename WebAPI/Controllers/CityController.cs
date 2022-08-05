@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using WebAPI.Data;
 using WebAPI.Data.Repos;
+using WebAPI.Dtos;
 using WebAPI.Interfaces;
 using WebAPI.Models;
 
@@ -18,20 +20,28 @@ namespace WebAPI.Controllers
     {
        
         private readonly IUnitOfWork uow;
+        private readonly IMapper mapper;
 
-        public CityController(IUnitOfWork uow)
+        public CityController(IUnitOfWork uow,IMapper mapper)
         {
-            
             this.uow = uow;
-           
+            this.mapper = mapper;
         }
         [HttpGet]
         public async Task<IActionResult> GetCities()
         {
             //var cities =await context.Cities.ToListAsync();
             //return Ok(cities);
+
+           
             var cities = await uow.CityRepository.GetCitiesAsync();
-            return Ok(cities);
+
+            var citiesDto = mapper.Map<IEnumerable<CityDto>>(cities);
+            //var citiesDto = from c in cities
+            //                select new CityDto { Id = c.Id, Name = c.Name };
+
+
+            return Ok(citiesDto);
         }
        
         //[HttpPost("add/{cityname}")]
@@ -43,10 +53,18 @@ namespace WebAPI.Controllers
         //    return Ok(city);
         //}
         [HttpPost("post")]
-        public async Task<IActionResult> AddCity(City city)
+        public async Task<IActionResult> AddCity(CityDto cityDto)
         {
             //await context.Cities.AddAsync(city);
             //await context.SaveChangesAsync();
+            //City city = new City
+            //{
+            //    Name = cityDto.Name,
+            //    LastUpdatedBy = "1",
+            //    LastUpdatedOn = DateTime.Now
+            //};
+            City city=mapper.Map<City>(cityDto);
+
             uow.CityRepository.AddCity(city);
             await uow.SaveAsync();
             return StatusCode(201);

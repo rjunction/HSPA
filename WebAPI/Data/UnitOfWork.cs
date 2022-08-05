@@ -15,7 +15,14 @@ namespace WebAPI.Data
         {
             this.context = context;
         }
-        public ICityRepository CityRepository => new CityRepository(context);
+       // public ICityRepository CityRepository => new CityRepository(context);
+        public ICityRepository CityRepository
+        {
+            get
+            {
+               return new CityRepository(context);
+            }
+        }
         public int abc { get; set; }
         public async Task<bool> SaveAsync()
         {
