@@ -22,6 +22,7 @@ export class AddPropertyComponent implements OnInit {
   furnishType:Array<any>=["Fuly","Semi","UnFurnished"]
   gateEntrance:Array<any>=["North","West","South","East"]
   nextClicked:boolean=false;
+  cityList:any[]=[];
   propertyView:IPropertyBase={
     Id:0,
     Image:'',
@@ -46,6 +47,11 @@ export class AddPropertyComponent implements OnInit {
     ) { }
 
   ngOnInit() {
+    this.housingService.getAllCities().subscribe(
+      (data)=>{
+        this.cityList=data;
+      }
+    );
     this.createAddPropertyForm();
   }
   createAddPropertyForm(){
